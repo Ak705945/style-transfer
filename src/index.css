@@ -1,13 +1,118 @@
+:root {
+  --background: #FFFFFF;
+  --text: #3788EE;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Header COMPONENT */
+.head {
+  width: 100%;
+  background: var(--background);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+}
+
+.head h2 {
+  font-size: 1.8rem;
+}
+
+.Button {
+  display: inline-block;
+  position: relative;
+  box-shadow: -1px -1px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.span {
+  font-family: 'Nunito', sans-serif;
+  font-weight: semibold;
+  font-size: 1.2rem;
+}
+
+.Button:hover {
+  opacity: 0.3;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Button:active {
+  opacity: 1;
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+i {
+  font-size: 1.3em;
+  color: var(--text);
+}
+
+/* Home Page COMPONENT */
+.IntroText {
+  margin-top: 15%;
+  font-weight: bold;
+  font-size: 85px;
+  line-height: 90px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.row {
+  margin: 1%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  height: 0;
+  width: 15%;
+  border: 4px solid var(--text);
+  border-radius: 5px;
+}
+
+.stinfo {
+  padding: 100px 5%;
+}
+
+.infoHead {
+  font-size:3rem;
+  margin-bottom: 2%;
+}
+
+.info{
+  font-family: 'Nunito', sans-serif;
+  margin: 5%;
+  font-size: 1.2rem;
+}
+
+@media (max-width:991px) {
+  .head .Button {
+    display: block;
+  }
+
+  hr {
+    width: 40%;
+  }
+  .info{
+    margin: 15% 5%;
+    font-size: 1.2rem;
+  }
 }
