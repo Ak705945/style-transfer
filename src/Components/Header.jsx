@@ -23,13 +23,13 @@ function Header() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <Button name={"Home"} />
+              <Button name={"Home"} title="span" />
             </li>
             <li class="nav-item active">
-              <Button name={"Try it now!"} />
+              <Button name={"Try it now!"} title="span" />
             </li>
             <li class="nav-item active">
-              <Button name={"Contact us"} />
+              <Button name={"Contact us"} title="span" />
             </li>
           </ul>
         </div>

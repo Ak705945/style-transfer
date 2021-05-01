@@ -4,7 +4,6 @@
 }
 
 body {
-  text-align: center;
   color: var(--text);
   font-family: "Lato", sans-serif;
 }
@@ -127,8 +126,31 @@ hr {
   font-size: 6em;
   color: var(--text);
 }
-.ResCard{
+.ResCard {
   margin: 5% 29%;
+}
+
+.tryButton {
+  width: 500px;
+  font-size: 3rem;
+}
+
+/* Footer Section */
+.contact-links {
+  font-size: 2.5rem;
+  margin: 15px;
+}
+.Footer {
+  margin-top: 4%;
+}
+.Footer h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 44px;
+}
+.Footer h3 {
+  margin-top: 15px;
+  font-size: 1rem;
 }
 
 @media (max-width: 991px) {
@@ -145,12 +167,12 @@ hr {
     font-size: 1.2rem;
   }
   .icons {
-    margin:10%; 
+    margin: 10%;
   }
-  .helpCard{
+  .helpCard {
     margin: 3% 1%;
   }
-  .ResCard{
-    margin: 0 4%;
+  .ResCard {
+    margin: 0 4% 15%;
   }
 }
