@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="Footer">
+    <div className="Footer scene_element scene_element--fadein" id="footer">
       <h2>Contact Us.</h2>
       <a href="mailto:ak705945@gmail.com?subject=feedback">
         <i class="fas fa-envelope contact-links"></i>

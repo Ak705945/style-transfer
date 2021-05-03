@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 function Header() {
@@ -23,13 +24,19 @@ function Header() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <Button name={"Home"} title="span" />
+              <Link to="/">
+                <Button name={"Home"} title="span" />
+              </Link>
             </li>
             <li class="nav-item active">
-              <Button name={"Try it now!"} title="span" />
+              <Link to="/try-page">
+                <Button name={"Try it now!"} title="span" />
+              </Link>
             </li>
             <li class="nav-item active">
-              <Button name={"Contact us"} title="span" />
+              <a href="#footer">
+                <Button name={"Contact us"} title="span" />
+              </a>
             </li>
           </ul>
         </div>

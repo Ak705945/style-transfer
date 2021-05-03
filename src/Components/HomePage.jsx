@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Introheader from "./HomePageComp/Introheader";
 import Stinfo from "./HomePageComp/Stinfo";
 import HelpCard from "./HomePageComp/HelpCard";
@@ -10,15 +11,12 @@ import ResultImage from "./HomePageComp/Images/Res.png";
 
 function HomePage() {
   return (
-    <div className="homePage">
+    <div className="homePage scene_element scene_element--fadein">
       <Introheader />
       <Stinfo />
       <div className="row">
         <div className="col-lg-5">
-          <HelpCard 
-            title="1.Base Image" 
-            Image={BaseImage} 
-            alt="Base Image" />
+          <HelpCard title="1.Base Image" Image={BaseImage} alt="Base Image" />
         </div>
         <div className="col-lg-2">
           <i class="fas fa-plus-circle icons"></i>
@@ -40,7 +38,9 @@ function HomePage() {
           alt="Result Image"
         />
       </div>
-      <Button title="tryButton" name="Try it now!"></Button>
+      <Link to="/try-page">
+        <Button title="tryButton" name="Try it now!"></Button>
+      </Link>
 
       <Footer />
     </div>
