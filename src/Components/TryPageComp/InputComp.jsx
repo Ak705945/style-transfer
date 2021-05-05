@@ -1,18 +1,16 @@
-import React,{ useState }  from "react";
+import React, { useState } from "react";
 import inputIllus from "./Images/001-input.svg";
 
 function InputComp(props) {
-    const [ImageTitle, setImageTitle] = useState("No File Choosen");
-    const [Image, setImage] = useState(inputIllus);
-    function handleChange(event){
-        if (event.target.files && event.target.files[0]) {
-            console.log(event.target.files[0]);
-            setImageTitle(event.target.files[0].name)
-            setImage(URL.createObjectURL(event.target.files[0]))
-
-        }
-
+  const [ImageTitle, setImageTitle] = useState("No File Choosen");
+  const [Image, setImage] = useState(inputIllus);
+  function handleChange(event) {
+    if (event.target.files && event.target.files[0]) {
+      setImageTitle(event.target.files[0].name);
+      setImage(URL.createObjectURL(event.target.files[0]));
     }
+  }
+  props.getImage(Image);
 
   return (
     <div className="card inputcard">
@@ -23,12 +21,11 @@ function InputComp(props) {
           <span className="span">Select Image</span>
           <input
             type="file"
-            accept="image/gif, image/jpeg, image/png"
+            accept="image/jpeg, image/png"
             name="image"
             id="file"
             onChange={handleChange}
           ></input>
-          
         </label>
         <h3 className="file-name">{ImageTitle}</h3>
       </div>
