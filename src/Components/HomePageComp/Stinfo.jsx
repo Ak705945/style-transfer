@@ -7,16 +7,16 @@ function Stinfo() {
       <hr />{" "}
       <p className="info">
         {" "}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nullam fermentum
-        in dui a hendrerit.Integer imperdiet nec risus a laoreet.Donec
-        fermentum, neque nec lobortis accumsan, tortor mauris tincidunt felis,
-        sed convallis nunc enim in mauris.Etiam ornare ligula nec quam tincidunt
-        tempor.Fusce vehicula velit mi, sed auctor augue pellentesque non.Nam
-        dictum fermentum lacus ac facilisis.Sed nec ipsum euismod, accumsan nunc
-        sed, pharetra arcu.Fusce varius commodo nisl, nec viverra turpis
-        convallis at.Donec elementum consectetur lacus, ac iaculis lacus commodo
-        eu.Ut efficitur leo vel enim sagittis, imperdiet placerat sapien
-        rhoncus.Nunc sit amet leo lacus.Ut mollis mollis metus sed pulvinar{" "}
+        If you’ve ever imagined what a photo might look like if it were painted
+        by a famous artist, then style transfer is the computer vision technique
+        that turns this into a reality.In more technical terms it is a technique
+        that takes two images a content image and a style reference image and
+        blends them together so that the resulting output image retains the core
+        elements of the content image, but appears to be “painted” in the style
+        of the style reference image.A scenary, for example, would supply the
+        image content, and the van Gogh painting would be the style reference
+        image. The output result would be a Scenary image that looks like a van
+        Gogh original!.below is what it would look like in a practice{" "}
       </p>
       <hr />
     </div>

@@ -3,10 +3,12 @@ import Footer from "./Footer";
 import Title from "./TryPageComp/Title";
 import InputComp from "./TryPageComp/InputComp";
 import Button from "./Button";
+import HelpCard from "./HomePageComp/HelpCard";
 
 function TryPage() {
   const [StyleImage, setStyleImage] = useState();
   const [BaseImage, setBaseImage] = useState();
+  const [ResImage, setResImage] = useState();
   function handleStyleChange(img) {
     setStyleImage(img);
   }
@@ -16,23 +18,29 @@ function TryPage() {
   function generateImage() {
     console.log(StyleImage);
     console.log(BaseImage);
+    // functionCall(StyleImage,BaseImage)
   }
-  // functionCall(StyleImage,BaseImage)
 
   return (
     <div className="scene_element scene_element--fadein">
       <Title />
-      <div className="row">
-        <div className="col-lg-6">
+      <div className="row justify-content-center">
+        <div className="col-lg-5">
           <InputComp title="1.Select Art Style" getImage={handleStyleChange} />
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-5">
           <InputComp title="2.Select Base Image" getImage={handleBaseChange} />
         </div>
       </div>
       <div className="ResultSection">
         <Button name="Generate Art" title="tryButton" onClick={generateImage} />
       </div>
+      <div className=" row justify-content-center">
+        <div className="col-lg-5">
+          <HelpCard Image={ResImage} title="3.Result image" alt=""></HelpCard>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

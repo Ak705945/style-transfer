@@ -196,8 +196,9 @@ input[type="file"] {
   display: none;
 }
 .img{
-  height: 450px;
+  height: 400px;
 }
+
 
 /* Animations */
 /** Basic styles for an animated element */
