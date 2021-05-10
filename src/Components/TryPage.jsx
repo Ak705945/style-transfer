@@ -9,16 +9,20 @@ function TryPage() {
   const [StyleImage, setStyleImage] = useState();
   const [BaseImage, setBaseImage] = useState();
   const [ResImage, setResImage] = useState();
-  function handleStyleChange(img) {
-    setStyleImage(img);
+  function handleStyleChange(link) {
+    setStyleImage(link);
   }
-  function handleBaseChange(img) {
-    setBaseImage(img);
+  function handleBaseChange(link) {
+    setBaseImage(link);
   }
   function generateImage() {
+    callAPI();
+    // functionCall(StyleImage,BaseImage)
+  }
+  function callAPI() {
     console.log(StyleImage);
     console.log(BaseImage);
-    // functionCall(StyleImage,BaseImage)
+    setResImage(StyleImage)
   }
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import inputIllus from "./Images/001-input.svg";
+import { storage } from "./firebase/index";
 
 function InputComp(props) {
   const [ImageTitle, setImageTitle] = useState("No File Choosen");
@@ -7,10 +8,27 @@ function InputComp(props) {
   function handleChange(event) {
     if (event.target.files && event.target.files[0]) {
       setImageTitle(event.target.files[0].name);
-      setImage(URL.createObjectURL(event.target.files[0]));
+      const image = event.target.files[0];
+      const uploadTask = storage.ref("images/" + image.name).put(image);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {},
+        (error) => {
+          console.log(error);
+        },
+        () => {
+          storage
+            .ref("images")
+            .child(image.name)
+            .getDownloadURL()
+            .then((url) => {
+              setImage(url);
+              props.getImage(url);
+            });
+        }
+      );
     }
   }
-  props.getImage(Image);
 
   return (
     <div className="card inputcard">
