@@ -4,6 +4,7 @@ import Title from "./TryPageComp/Title";
 import InputComp from "./TryPageComp/InputComp";
 import Button from "./Button";
 import HelpCard from "./HomePageComp/HelpCard";
+import axios from "axios";
 
 function TryPage() {
   const [StyleImage, setStyleImage] = useState();
@@ -19,12 +20,17 @@ function TryPage() {
     callAPI();
     // functionCall(StyleImage,BaseImage)
   }
-  function callAPI() {
-    console.log(StyleImage);
-    console.log(BaseImage);
-    setResImage(StyleImage)
-  }
 
+  function callAPI() {
+    axios
+      .post("https://reqres.in/api/users", {      //just change the url of in here
+        styleLink: StyleImage,
+        baseLink: BaseImage,
+      })
+      .then(function (response) {
+        console.log(response);
+      });
+  }
   return (
     <div className="scene_element scene_element--fadein">
       <Title />
